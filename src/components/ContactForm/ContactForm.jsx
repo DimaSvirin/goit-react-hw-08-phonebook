@@ -1,22 +1,22 @@
 import { Form, Label, Input, Button } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/contacts/selectors';
 import { nanoid } from '@reduxjs/toolkit';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
+import Notiflix from 'notiflix';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   
   const handleSubmit = e => {
-    console.log(contacts);
     e.preventDefault();
 
     const name = e.target.elements.name.value;
     const number = e.target.elements.number.value;
 
     if (contacts.find(el => el.name === name)) {
-      alert(name + ' is already in contacts');
+      Notiflix.Notify.warning('Name "' + name + '" is already in contacts');
       e.target.reset();
       return;
     }
@@ -35,7 +35,7 @@ export const ContactForm = () => {
     <Form onSubmit={handleSubmit}>
       <Label htmlFor="name">Name </Label>
       <Input
-        autoComplete='off'
+        autoComplete='email'
         id="name"
         type="text"
         name="name"
@@ -46,7 +46,7 @@ export const ContactForm = () => {
 
       <Label htmlFor="tel">Number </Label>
       <Input
-        autoComplete='off'
+        autoComplete='new-password'
         id="tel"
         type="tel"
         name="number"
