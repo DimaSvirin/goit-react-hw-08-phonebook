@@ -1,6 +1,6 @@
 import useAuth from 'hooks/useAuth';
 import { useDispatch } from 'react-redux';
-import { logOut } from 'redux/auth/authOperations.js';
+import { logOut } from 'redux/auth/authOperations';
 import MUI from 'components/MUI.js';
 import LogoutIcon from '@mui/icons-material/Logout';
 

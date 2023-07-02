@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import MUI from 'components/MUI.js';
+import MUI from 'components/MUI';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import LoginIcon from '@mui/icons-material/Login';
 

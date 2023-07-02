@@ -7,7 +7,7 @@ export default function Home() {
           backgroundRepeat: 'repeat',
           backgroundPosition: 'center',
           width: 1200,
-          height: 300,
+          height: 400,
           position:'center',
           marginTop: -65,
           padding:0,

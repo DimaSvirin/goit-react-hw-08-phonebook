@@ -16,11 +16,6 @@ export default function Contacts() {
 
   return (
     <div>
-      {/* <h2>Contacts</h2> */}
-      {/* <ContactForm />
-      <Filter />
-      <ContactList />
-      {isLoading && <p>Loading...</p>} */}
       <MUI.Box sx={{ flexGrow: 1 }}>
       <MUI.Grid container spacing={2} columns={16}>
         <MUI.Grid item xs={5}>
@@ -33,7 +28,6 @@ export default function Contacts() {
         </MUI.Grid>
       </MUI.Grid>
     </MUI.Box>
-      
     </div>
   );
 }
